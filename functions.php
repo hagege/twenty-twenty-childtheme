@@ -32,6 +32,22 @@ function manual_excerpt_more( $excerpt ) {
 add_filter( 'get_the_excerpt', 'manual_excerpt_more' ); 
 
 
+add_action( 'widgets_init', 'my_register_sidebars' );
+function my_register_sidebars() {
+    /* Register the 'primary' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'primary',
+            'name'          => __( 'Sidebar rechts' ),
+            'description'   => __( 'Sidebar, die rechts angezeigt werden kann.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    /* Repeat register_sidebar() code for additional sidebars. */
+}
 
 
 ?>

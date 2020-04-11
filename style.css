@@ -9,6 +9,19 @@ Version:      1.0 (2020-04-08)
 */ 
 
 
+/* Versuch, eine sidebar zu implementieren *
+article#post-2 {
+    display: flex;
+}
+}
+
+div#sidebar-primary{
+  display: flex;
+  flex-direction: column;
+}
+
+*/
+
 /* Breite des Blogs ändern */
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     max-width: 88rem;
