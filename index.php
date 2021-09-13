@@ -25,7 +25,7 @@ get_header();
 	$archive_subtitle = '';
 
 					$has_social_menu = has_nav_menu( 'social' );
-					<?php if ( $has_social_menu ) { ?>
+					if ( $has_social_menu ) { ?>
 
 						<nav aria-label="<?php esc_attr_e( 'Social links', 'twentytwenty' ); ?>" class="footer-social-wrapper">
 
@@ -52,7 +52,7 @@ get_header();
 
 						</nav><!-- .footer-social-wrapper -->
 
-					<?php } ?>
+					<?php } 
    	if ( is_search() ) {
 		global $wp_query;
 
